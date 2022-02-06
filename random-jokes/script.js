@@ -69,11 +69,12 @@ async function getData() {
     getChuckJokes();
   } else if (currentLang === "ru") {
     chuckImg.src = "assets/img/monah.jpeg";
-    btn.textContent = "Хочу еще мудрости!";
+    btn.textContent = "Стать мудрее!";
     getQuotes();
   }
   setTimeout(() => chuckImg.classList.remove("shake-img"), 500);
 }
+getData();
 
 btn.addEventListener("click", getData);
 switchLang.addEventListener("click", (e) => {
