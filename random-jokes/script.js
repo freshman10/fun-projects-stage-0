@@ -65,10 +65,12 @@ async function getData() {
 
   if (currentLang === "en") {
     btn.textContent = "Make me laugh, Chuck!";
+    chuckImg.style.width = "150px";
     chuckImg.src = "assets/img/chuck.png";
     getChuckJokes();
   } else if (currentLang === "ru") {
-    chuckImg.src = "assets/img/monah.jpeg";
+    chuckImg.src = "assets/img/monah.png";
+    chuckImg.style.width = "250px";
     btn.textContent = "Стать мудрее!";
     getQuotes();
   }
