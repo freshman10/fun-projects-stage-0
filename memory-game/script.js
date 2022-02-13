@@ -20,7 +20,7 @@ let waitFlag = true;
 const score = document.querySelector(".score");
 const labelScore = document.querySelector(".label-score");
 const newGameBtn = document.querySelector(".new-game-btn");
-const points = 100;
+const points = 0;
 const hamburger = document.querySelector(".hamburger-container");
 const lines = document.querySelectorAll(".line");
 const menuContainer = document.querySelector(".menu-container");
@@ -178,7 +178,7 @@ function init() {
   });
 
   score.innerHTML = points;
-  labelScore.innerHTML = "Current score: ";
+  labelScore.innerHTML = "Steps";
   newGameBtn.classList.add("hidden");
   scoresMenuList = document.querySelector(".menu-container").children;
   updateMenu();
@@ -217,15 +217,8 @@ init();
 
 function decreaseScore(points) {
   const currentScore = Number(score.innerHTML);
-  if (currentScore > 0) {
-    score.innerHTML = currentScore - points;
-  } else {
-    score.innerHTML = "You lose !";
-    labelScore.innerHTML = "";
-    newGameBtn.classList.remove("hidden");
-    waitFlag = false;
-    addScore(0);
-  }
+
+  score.innerHTML = currentScore + points;
 }
 
 newGameBtn.addEventListener("click", function (e) {

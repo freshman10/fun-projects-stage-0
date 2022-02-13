@@ -198,7 +198,7 @@ footer {
 }
 
 .menu-container {
-  width: 300px;
+  width: 100px;
   height: auto;
   overflow: hidden;
   background-color: black;
@@ -223,5 +223,21 @@ footer {
 }
 
 .hide-menu {
-  right: -300px;
+  right: -100px;
+}
+
+.label-score {
+  padding-right: 20px;
+  font-weight: 600;
+}
+.score {
+  font-weight: 600;
+}
+
+.menu-container {
+  font-size: 20px;
+}
+
+.menu-container > p {
+  color: rgb(45, 223, 21);
 }
